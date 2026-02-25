@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Música ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="player-card">
+        <div class="img-container">
+            <img src="portadas/default.jpg" alt="Portada" id="cover">
+        </div>
+
+        <div class="song-details">
+            <h1 class="typing-effect">Para mi niña favorita...</h1>
+            
+            <div id="title">Título de la canción</div>
+            <div id="artist">Artista</div>
+            <p id="message"></p> 
+        </div>
+
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <div class="controls">
+            <button id="prev" class="action-btn">⏮</button>
+            <button id="play" class="action-btn main-btn">▶</button>
+            <button id="next" class="action-btn">⏭</button>
+        </div>
+
+        <audio id="audio"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+/* 1. CONFIGURACIÓN GENERAL */
+body {
+    background-color: #ffe5ec;
+    display: flex;
+    flex-direction: column; /* Para que el countdown y el player se apilen */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden; /* Para que los corazones no hagan scroll */
+}
+
+/* 2. TARJETA DEL REPRODUCTOR */
+.player-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(255, 105, 180, 0.2);
+    padding: 30px;
+    width: 320px;
+    text-align: center;
+    z-index: 10; /* Para estar sobre los corazones */
+}
+
+/* 3. IMAGEN / DISCO */
+.img-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Lo dejamos circular tipo disco */
+    object-fit: cover;
+    border: 5px solid #fb6f92;
+    transition: transform 0.5s ease;
+}
+
+/* Animación de rotación cuando hay clase .play */
+.player-card.play .img-container img {
+    animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 4. TEXTOS Y LETRAS (Lo que querías bonito) */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: #ff4d6d;
+    margin-bottom: 10px;
+}
+
+#title {
+    background: linear-gradient(to right, #ff4d6d, #ff8fa3);
+    -webkit-background-clip: text; /* Propiedad para Chrome/Safari */
+    background-clip: text;         /* ✨ ESTA ES LA LÍNEA QUE FALTA (Propiedad estándar) */
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+#artist {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    color: #777;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+#message {
+    color: #888;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+    font-style: italic;
+    font-size: 0.85rem;
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+/* Efecto de escritura para el mensaje principal */
+.typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 3px solid #ff4d6d;
+    white-space: nowrap;
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ff4d6d }
+}
+
+/* 5. CONTROLES Y BARRA */
+.progress-container {
+    background: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+    height: 6px;
+    width: 100%;
+}
+
+.progress {
+    background-color: #fb6f92;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: #fb6f92;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: transform 0.2s;
+}
+
+.action-btn:hover {
+    transform: scale(1.2);
+}
+
+.main-btn {
+    font-size: 45px;
+}
+
+/* 6. LLUVIA DE CORAZONES */
+.falling-heart {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    z-index: 1;
+    pointer-events: none;
+    animation: fall linear forwards;
+    opacity: 0.8;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(105vh) rotate(360deg); opacity: 0; }
+}
