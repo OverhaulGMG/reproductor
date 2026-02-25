@@ -90,5 +90,4 @@ progressContainer.addEventListener('click', (e) => {
     const clickX = e.offsetX;
     const duration = audio.duration;
     audio.currentTime = (clickX / width) * duration;
-
 });
