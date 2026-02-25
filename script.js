@@ -18,7 +18,7 @@ const songs = [
     { title: 'Me acuerdo de ti.', artist: 'Cuando escucho esta canción me acuerdo de ti.', file: 'musica/Huracan.mp3', img: 'portadas/h.jpg' },
     { title: 'Canción que nos mama.', artist: 'Vi que te gustaba en tus compartidos.', file: 'musica/4x4.mp3', img: 'portadas/4x4.jpg' },
     { title: 'Por si dudas de mi amor.', artist: 'Cuando sientas que no te amo escucha esta canción.', file: 'musica/TeOfrezcoUnCorazon.mp3', img: 'portadas/ofrezco.jpg' },
-    { title: 'Nosotros bien hots.', artist: 'Siento que somos esos ya bien emocionados.', file: 'musica/ElTiernoSeFue.mp3', img: 'portadas/tierno.jpg' },
+    { title: 'Nosotros bien emocionados.', artist: 'Siento que somos esos ya bien emocionados.', file: 'musica/ElTiernoSeFue.mp3', img: 'portadas/tierno.jpg' },
     { title: 'Nuestra boda.', artist: 'Canción que suene en nuestra boda, para andar bien bélicos alv.', file: 'musica/GOET.mp3', img: 'portadas/g.jpg' },
     { title: 'Anillo de promesa', artist: 'Quiero que suene mientras pongo el anillo en tu dedo.', file: 'musica/AsquerosamenteRico.mp3', img: 'portadas/rico.jpg' },
     { title: 'Ebrio de amor', artist: 'Canción que te cantaria si se me pasaran las copas.', file: 'musica/HermosoCariño.mp3', img: 'portadas/hermoso.jpg' },
@@ -90,4 +90,5 @@ progressContainer.addEventListener('click', (e) => {
     const clickX = e.offsetX;
     const duration = audio.duration;
     audio.currentTime = (clickX / width) * duration;
+
 });
