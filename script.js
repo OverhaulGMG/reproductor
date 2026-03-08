@@ -22,7 +22,8 @@ const songs = [
     { title: 'Nuestra boda.', artist: 'Canción que suene en nuestra boda, para andar bien bélicos alv.', file: 'musica/GOET.mp3', img: 'portadas/g.jpg' },
     { title: 'Anillo de promesa', artist: 'Quiero que suene mientras pongo el anillo en tu dedo.', file: 'musica/AsquerosamenteRico.mp3', img: 'portadas/rico.jpg' },
     { title: 'Ebrio de amor', artist: 'Canción que te cantaria si se me pasaran las copas.', file: 'musica/HermosoCariño.mp3', img: 'portadas/hermoso.jpg' },
-    { title: 'Indirecta.', artist: 'Tu eres solo mia.', file: 'musica/TUTUTU.mp3', img: 'portadas/tu.jpg' }
+    { title: 'Indirecta.', artist: 'Tu eres solo mia.', file: 'musica/TUTUTU.mp3', img: 'portadas/tu.jpg' },
+    { title: 'Te amare toda la vida preciosa. 💞', artist: 'Nuestro amor es mas que eterno, te amo ininitamente. 💞 ', file: 'musica/TodoaSuTiempo.mp3', img: 'portadas/geral.jpeg' }
 ];
 
 let songIndex = 0;
